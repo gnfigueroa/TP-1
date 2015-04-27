@@ -1,7 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
+/*
+Programa pasaje de Celsius a Fahreinheit (0 a 300)
+Gabriel Nicolas Figueroa
+26 de abril del 2015 
+*/
+int main(void)
 {
 
  float fahr, celsius;
@@ -9,13 +13,12 @@ int main()
  lower = 0; /* lower limit of temperatuire scale */
  upper = 300; /* upper limit */
  step = 20; /* step size */
- fahr = lower;
+ celsius = lower;
  printf("Celsius      Fahrenheit\n");
- while (fahr <= upper) {
-       celsius = (5.0/9.0) * (fahr-32.0);
-       printf("%6.1f        %3.0f \n", celsius,fahr);
-       fahr = fahr + step;
+ while (celsius <= upper) {
+       fahr = (9.0/5.0 * celsius)+32.0;
+       printf("%6.1f        %3.1f \n", celsius,fahr);
+       celsius = celsius + step;
        }
- system("PAUSE");	
  return 0;
 }
